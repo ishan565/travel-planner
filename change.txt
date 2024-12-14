@@ -1,0 +1,99 @@
+  header {
+    padding: 20px;
+    background:url(head.jpg) no-repeat center/cover;
+    
+    /* color: white; */
+    padding: 0.8 rem;
+    color: #fff; /* Adjust text color for contrast */
+    border-bottom: 2px solid #ccc;
+  }
+  
+  header h1 {
+    border: 10px;
+    border-radius: 500px;
+    padding:5px;
+    margin: auto;
+    position: relative; /* Ensure text remains above the background */
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: 600; /* Semi-bold for emphasis */
+    color: #000000; /* Neutral dark gray */
+    margin: 0;
+    line-height: 1.2; /* Slightly tight line spacing for elegance */
+    text-transform: capitalize; /* Makes the text more polished */
+    letter-spacing: 1px; /* Subtle spacing for readability */
+    z-index: 1; /* Keeps text above the blurred background */
+}
+header h1 {
+    border: 10px;
+    border-radius: 500px;
+    position: relative; /* Allows the use of ::before */
+    display: inline-block; /* Ensures the background adjusts to the text width */
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: 600; /* Semi-bold for emphasis */
+    color: #000000; /* Neutral dark gray */
+    margin: 20px;
+    line-height: 1.2; /* Slightly tight line spacing for elegance */
+    text-transform: capitalize; /* Makes the text more polished */
+    letter-spacing: 1px; /* Subtle spacing for readability */
+    z-index: 1; /* Keeps the text above its background */
+}
+
+header h1::before {
+    padding: 30px;
+    margin: auto;
+    content: ""; /* Creates the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blurs anything behind it */
+    border-radius: 5px; /* Adds a slight rounding for aesthetics */
+    z-index: -1; /* Pushes it behind the text */
+    padding: 10px; /* Optional: Adds space around the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+  /* nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
+  } */
+  nav ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0;
+    display: flex; /* Aligns items horizontally */
+    gap: 1rem; /* Adds spacing between buttons */
+    justify-content:flex-start; /* Center-aligns navigation */
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Ensures each item behaves like a block for styling */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Ensures padding and background are applied properly */
+    padding: 0.5rem 1rem; /* Adjusts the size of the button */
+    /* border:1px solid #007bff; Adds a border around the button */
+    border-radius: 80px; /* Rounds the corners */
+    background-color: #1b5d5d; /* Button background color */
+    color: #000000; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Modern font for buttons */
+    font-size: 1rem; /* Adjust font size */
+    transition: all 0.3s ease; /* Adds a smooth transition effect */
+}
+
+nav ul li a:hover {
+    background-color: #02b9bc; /* Darker blue on hover */
+    color: #fff; /* Keeps text white */
+    border-color: #02b9bc; /* Matches the hover background */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}

@@ -1,0 +1,403 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+  }
+
+/* Header Styling */
+header {
+    padding: 20px;
+    background: url('head.jpg') no-repeat center/cover; /* Full-cover background image */
+    color: #fff; /* Text color */
+    border-bottom: 2px solid #ccc; /* Subtle bottom border */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
+    position: relative; /* Ensures child elements like pseudo-elements stay within context */
+    gap: 1rem;
+}
+
+/* Header Title */
+header h1 {
+    position: relative; /* Keeps text above its background */
+    display: inline-block; /* Adjusts background size to match text */
+    font-family: 'Playfair Display', serif; /* Elegant font for title */
+    font-size: 2.5rem; /* Large font size */
+    font-weight: 600; /* Semi-bold for emphasis */
+    color: #000; /* Dark text color */
+    margin: 0; /* Removes unnecessary margins */
+    line-height: 1.2; /* Balanced line spacing */
+    text-transform: capitalize; /* Polished text appearance */
+    letter-spacing: 1px; /* Slight spacing for readability */
+    z-index: 1; /* Ensures text is above the blurred background */
+    padding: 1rem 2rem; /* Padding inside the title */
+}
+
+/* Blurry Background for Header Title */
+header h1::before {
+    content: ""; /* Creates the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Blurs content behind */
+    border-radius: 12px; /* Smooth rounded edges */
+    z-index: -1; /* Pushes it behind the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Aligns items horizontally */
+    gap: 1rem; /* Space between buttons */
+    justify-content: center; /* Centers the navigation */
+}
+
+/* Navigation Items */
+nav ul li {
+    display: inline-block; /* Buttons are block-level for better styling */
+}
+
+/* Navigation Links */
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Ensures padding and background are applied properly */
+    padding: 0.6rem 1.2rem; /* Adjust button size */
+    border-radius: 25px; /* Fully rounded corners for button-like appearance */
+    background-color: #1b5d5d; /* Base button background color */
+    color: #fff; /* White text */
+    font-family: 'Poppins', sans-serif; /* Clean, modern font */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: 500; /* Medium weight for emphasis */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* Navigation Hover Effect */
+nav ul li a:hover {
+    background-color: #02b9bc; /* Lighter color on hover */
+    color: #fff; /* Keep text white */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth on hover */
+}
+
+  
+  
+  main {
+    padding: 1rem;
+  }
+  footer {
+    text-align:right;
+    background: #000000;
+    color: white;
+    padding: 1rem;
+  }
+  /* header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #007bff;
+    color: white;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  } */
+  
+  header .logo {
+    margin: 20px;
+    width: 140px; /* Adjust size as needed */
+    height: 110px; /* Adjust size as needed */
+    position: fixed; /* Ensures it stays in place while scrolling */
+    top: 1rem; /* Distance from the top edge */
+    right: 1rem; /* Distance from the right edge */
+    z-index: 1000; /* Ensures it stays above other elements */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  /* General Container for Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures cards adjust to smaller screens */
+    justify-content: center; /* Center-aligns cards */
+    gap: 1.5rem; /* Adds space between cards */
+    padding: 2rem; /* Adds padding around the container */
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #f9f9f9; /* Light background for the card */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+    width: 300px; /* Fixed width for cards */
+    overflow: hidden; /* Ensures content stays inside the card */
+    text-align: center; /* Centers text inside the card */
+    padding: 1rem;
+}
+
+/* Card Hover Animation */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increases shadow on hover */
+}
+
+/* Card Title Styling */
+.card h3 {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 1.5rem;
+    color: #333; /* Dark text for contrast */
+    margin-bottom: 0.5rem;
+}
+
+/* Card Subtitle Styling */
+.card p {
+    font-size: 1rem;
+    color: #555; /* Lighter text for description */
+    margin-bottom: 1rem;
+}
+
+/* Brochure Link */
+.card a {
+    text-decoration: none; /* Removes underline */
+    color: #007bff; /* Bright link color */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.card a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Makes cards full-width on smaller screens */
+    }
+}
+.explore-destinations {
+    text-align: center;
+    padding: 0px 0;
+    
+    
+ }
+ #destinations{
+    font-family: 'Playfair Display', serif;
+ }
+ 
+ .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    color: #000000;
+ }
+ 
+ .destination-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+ }
+ 
+ .destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ 
+ .destination-card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
+ }
+ 
+ .destination-card:hover {
+    transform: scale(1.05);
+ }
+ 
+
+
+
+
+ /* last change */
+ 
+
+ /* iternary css */
+ #itinerary {
+    padding: 50px;
+    text-align: center;
+    background-color: #a5cfd2;
+    
+  }
+
+  
+
+  #some{
+    font-family: 'Playfair Display', serif; 
+  }
+  
+  #itinerary h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .itinerary-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+  }
+  
+  .itinerary-item {
+    background-color: #e6e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+  
+  .itinerary-item:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .itinerary-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .itinerary-item p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .itinerary-item ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .itinerary-item ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .itinerary-item ul li::before {
+    content: "✔️";  /* Adding a check mark icon before each item */
+    margin-right: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .itinerary-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .itinerary-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+  /* flexbox part from js to html */
+  #destinations {
+    padding: 0px;
+    text-align: center;
+    background-color: #d0c4c4;
+  }
+  
+  #destinations h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .destination-container {
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .destination-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0px;
+    width: 260px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    height: 250px;
+    color:#000;
+  }
+  .explore-destinations{
+    color: #000;
+  }
+  .destination-card:hover {
+    transform: scale(1.15); /* Zoom effect on hover */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .destination-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .destination-card img { /* Add this rule for the images */
+    width: 100%; /* Make images fit the container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center the image horizontally within the card */}
+  
+  .destination-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .destination-card a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .destination-card a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .destination-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .destination-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
